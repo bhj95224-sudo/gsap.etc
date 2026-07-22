@@ -537,27 +537,27 @@ h1 a img {
   align-self: flex-start;
 }
 
-.info_section .info_tit  h2{
+.info_section .info_tit h2 {
   line-height: 1.1;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
-.section_lead{
+.section_lead {
   min-width: 440px;
   margin: 20px 0 24px;
   color: var(--ink);
   font-size: 0.8rem;
   font-weight: 100;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
-.sticky_box{
+.sticky_box {
   width: 100%;
   height: 42vh;
   background-size: cover;
   background-position: center;
   border-radius: 24px;
-  box-shadow: 0 24px 70px rgba(108,80,72,08);
+  box-shadow: 0 24px 70px rgba(108, 80, 27, .08);
 }
 
 .info_section .projects_all {
@@ -566,24 +566,24 @@ h1 a img {
   flex-direction: column;
   gap: 20vh;
 }
-.info_section .projects_all .card{
+
+.info_section .projects_all .card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    color-mix(in oklch, #623c18 86%, white) 0%,
-    #623c18 24%,
-    color-mix(in oklch, #623c18 48%, #c18610) 48%,
-    #c18610 72%,
-    color-mix(in oklch, #c18610 70%, black) 100%
-  );
-  background-blend-mode: screen,lighten,overlay,normal;
+  background-color: #101827;
+  background-image:
+    radial-gradient(circle at 18% 26%, color-mix(in oklch, #ff8a1e 88%, white) 0 14%, transparent 38%),
+    radial-gradient(circle at 82% 22%, color-mix(in oklch, #101827 74%, white) 0 16%, transparent 42%),
+    repeating-radial-gradient(circle at 52% 58%, transparent 0 25px, color-mix(in oklch, #ff8a1e 34%, transparent) 26px 27px, transparent 28px 50px),
+    conic-gradient(from 118deg at 50% 50%, #ff8a1e, #101827, color-mix(in oklch, #ff8a1e 42%, #101827), #ff8a1e);
+  background-blend-mode: screen, lighten, overlay, normal;
   min-height: 52vh;
   border-radius: 22px;
-  padding: clamp(28px,4vw,54px);
-  
+  padding: clamp(28px, 4vw, 54px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
 .projects_all .card::before {
   content: '';
   position: absolute;
@@ -592,7 +592,6 @@ h1 a img {
   border-radius: 16px;
   pointer-events: none;
 }
-
 .process_number {
   position: absolute;
   top: 30px;
@@ -602,7 +601,6 @@ h1 a img {
   font-size: clamp(4rem, 9vw, 8rem);
   line-height: 1;
 }
-
 .projects_all .card h4 {
   position: relative;
   max-width: 11ch;
@@ -617,7 +615,6 @@ h1 a img {
   color: rgba(233, 238, 245, .76);
   font-size: 1.04rem;
 }
-
 /* pin_scene */
 .pin_scene {
   height: 100vh;
